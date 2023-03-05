@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$font-1 : 'Indie Flower', cursive;
+$font-2 : 'Orbitron', sans-serif;
+$font-3 : 'Poppins', sans-serif;
+
+
+// colors
+$color-1: #223149;
+$color-2: #EBF4F5;
+$color-3: #CAFAFF;
+$color-4: #fcf6bd;
+$color-5: #bfbfbf;
+$color-6: #e8edfb;
+
+
+// Responsive
+$breakpoints: (
+    tablette: 1023px,
+    mobile: 767px,
+);

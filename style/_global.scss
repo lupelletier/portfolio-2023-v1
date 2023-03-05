@@ -1,0 +1,245 @@
+@import "variables";
+@import "mixins";
+body {
+
+  font-family: $font-2;
+  padding: 16px;
+  margin: 0;
+  background-color: $color-1;
+  color: $color-2 ;
+
+
+  
+  .logo-lp{
+    list-style: none;
+    text-decoration: none;
+    color: $color-2;
+
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 300;
+    color: inherit;
+    padding: 50px;
+  }
+
+  .center {
+    text-align: center;
+  }
+  
+  section {
+    height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+  // header
+
+  header{
+    font-family: $font-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: $color-1;
+
+
+    .responsive-label{
+      display: none;
+      @include mobile-only{
+        display: block;
+        font-size: 30px;
+        color: $color-2;
+        cursor: pointer;
+        right: 0px;
+      }
+      
+    }
+    .responsive-label:active{
+      color: black;
+    }
+  /* NAVIGATION */
+    nav {
+      background: transparent;
+      padding: 50px 0;
+      @include mobile-only {
+        display: none;
+        flex-direction: column;
+          height: 220px;
+      }
+
+
+
+    }
+    nav ol {
+      text-align: center;
+      display: flex;
+
+    }
+    nav ol li{
+      list-style-position: inside;
+      text-align: center;
+      margin: 0 20px;
+    }
+    nav ol li a {
+
+
+      text-decoration: none;
+      color: $color-2;
+      font-weight: 500;
+
+    }
+    nav ol li ,
+    nav ol li :after,
+    nav ol li :before {
+      transition: all .5s;
+    }
+    nav ol li :hover {
+      color: $color-4;
+    }
+
+    nav ol li :active {
+      color: $color-4;
+    }
+
+    
+    /* stroke animation  */
+    nav.stroke ol li a,
+    nav.fill ol li a {
+      position: relative;
+    }
+    nav.stroke ol li :after,
+    nav.fill ol li :after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '.';
+      color: transparent;
+      background: $color-4;
+      height: 1px;
+    }
+    nav.stroke ol li :hover:after {
+      width: 100%;
+
+    }
+    
+    nav.fill ol li {
+      transition: all 2s;
+    }
+    
+    nav.fill ol li :after {
+      text-align: left;
+      content: '.';
+      margin: 0;
+      opacity: 0;
+    }
+    nav.fill ol li :hover {
+      color: transparent;
+      z-index: 1;
+    }
+    nav.fill ol li :hover:after {
+      z-index: -10;
+      animation: fill 1s forwards;
+      -webkit-animation: fill 1s forwards;
+      -moz-animation: fill 1s forwards;
+      opacity: 1;
+    }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+
+  
+  
+}
+footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #000;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+  align-items: center;
+
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    h3{
+      font-size: 2.1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 3rem;
+  }
+    p{
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+      color: #cacdd2;
+  }
+    .socials{
+      display: none;
+      @include mobile-only{
+        display: block;
+
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+      li{
+        margin: 0 10px;
+    }
+    a{
+      text-decoration: none;
+      color: #fff;
+      border: 1.1px solid white;
+      padding: 5px;
+      border-radius: 50%;
+      i{
+        font-size: 1.1rem;
+        width: 20px;
+        transition: color .4s ease;
+    }
+  }
+  a:hover i{
+    color: $color-4;
+}
+}
+}
+ 
+}
+.footer-bottom{
+  background: #000;
+  width: 100%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+
+  p{
+    text-align: center;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+
+ }
+
+}
+
+}
+}
+
+  
